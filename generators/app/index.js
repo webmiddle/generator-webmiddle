@@ -3,6 +3,17 @@ var Generator = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
+// return a new array
+function stringifyProps(props) {
+  var stringifiedProps = {};
+  for (var prop in props) {
+    if (Object.prototype.hasOwnProperty.call(props, prop)) {
+      stringifiedProps[prop] = JSON.stringify(props[prop]);
+    }
+  }
+  return stringifiedProps;
+}
+
 module.exports = Generator.extend({
   prompting: function () {
     // Have Yeoman greet the user.
@@ -44,7 +55,7 @@ module.exports = Generator.extend({
     this.fs.copyTpl(
       this.templatePath('**'),
       this.destinationPath(),
-      this.props,
+      stringifyProps(this.props),
       undefined,
       { globOptions: { dot: true } } // include dot files (.babelrc, etc)
     );

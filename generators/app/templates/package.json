@@ -1,8 +1,8 @@
 {
-  "name": "<%= name %>",
+  "name": <%- name %>,
   "private": true,
   "version": "0.0.1",
-  "description": "<%= description %>",
+  "description": <%- description %>,
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -32,8 +32,8 @@
     ],
     "babel": "inherit"
   },
-  "author": "<%= author %>",
-  "license": "<%= license %>",
+  "author": <%- author %>,
+  "license": <%- license %>,
   "dependencies": {
     "webmiddle": "*",
     "webmiddle-service-arraymap": "*",
