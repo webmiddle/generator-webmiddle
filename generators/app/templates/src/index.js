@@ -12,7 +12,7 @@ evaluate(createContext(webmiddle, { expectResource: true }), (
     url={process.argv[2]}
     query={process.argv[3]}
     waitFor={process.argv[4]}
-  />,
+  />
 )).then(outputResource => {
   console.log(
     JSON.stringify(outputResource.content, null, 2)
