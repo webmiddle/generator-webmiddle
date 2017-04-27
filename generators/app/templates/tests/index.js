@@ -7,10 +7,13 @@ test.beforeEach(t => {
 });
 
 test('FetchPageLinks', async t => {
-  await evaluate(createContext(t.context.webmiddle, { expectResource: true }), (
+  const resource = await evaluate(createContext(t.context.webmiddle, { expectResource: true }), (
     <FetchPageLinks
       url="https://news.ycombinator.com/"
       query="javascript"
     />
   ));
+
+  t.is(resource.contentType, 'application/json');
+  t.is(typeof resource.content.root, 'object');
 });
