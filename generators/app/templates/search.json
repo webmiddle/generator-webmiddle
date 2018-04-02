@@ -2,7 +2,7 @@
   "searchProps": {
 
   },
-  "webmiddleSettings": {
+  "contextOptions": {
     "verbose": false
   },
   "evaluateOptions": {
