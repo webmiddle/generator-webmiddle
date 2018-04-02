@@ -3,11 +3,12 @@ import FetchPageLinks from '../src/FetchPageLinks';
 import WebMiddle, { evaluate, createContext } from 'webmiddle';
 
 test.beforeEach(t => {
-  t.context.webmiddle = new WebMiddle();
+  const webmiddle = new WebMiddle();
+  t.context.context = createContext(webmiddle);
 });
 
 test('FetchPageLinks', async t => {
-  const resource = await evaluate(createContext(t.context.webmiddle, { expectResource: true }), (
+  const resource = await evaluate(createContext(t.context.context, { expectResource: true }), (
     <FetchPageLinks
       url="https://news.ycombinator.com/"
       query="javascript"
