@@ -1,6 +1,6 @@
 import test from 'ava';
 import FetchPageLinks from '../src/FetchPageLinks';
-import webmiddle, { evaluate, createContext } from 'webmiddle';
+import { evaluate, createContext } from 'webmiddle';
 
 test.beforeEach(t => {
   t.context.context = createContext();
