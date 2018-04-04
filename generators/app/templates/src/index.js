@@ -1,18 +1,20 @@
 // TODO: use the framework to define a search project with Main.js as entrypoint
 
 //import { SearchProject } from 'webmiddle-project-search';
-import { evaluate, createContext } from 'webmiddle';
+import { rootContext } from 'webmiddle';
 import path from 'path';
 import fs from 'fs';
 import FetchPageLinks from './FetchPageLinks';
 
-evaluate(createContext({ expectResource: true }), (
+rootContext.extend({
+  expectResource: true
+}).evaluate(
   <FetchPageLinks
     url={process.argv[2]}
     query={process.argv[3]}
     waitFor={process.argv[4]}
   />
-)).then(outputResource => {
+).then(outputResource => {
   console.log(
     JSON.stringify(outputResource.content, null, 2)
   );
