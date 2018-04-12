@@ -1,14 +1,14 @@
 {
   "name": <%- name %>,
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": <%- description %>,
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "engines": {
-    "node": ">=6"
+    "node": "^6.9.0 || >=8.0.0"
   },
   "scripts": {
     "test": "ava",
@@ -38,18 +38,18 @@
   "author": <%- author %>,
   "license": <%- license %>,
   "dependencies": {
-    "webmiddle": "^0.2.0",
-    "webmiddle-service-arraymap": "^0.2.0",
-    "webmiddle-service-browser": "^0.2.0",
-    "webmiddle-service-cheerio-to-json": "^0.2.0",
-    "webmiddle-service-cheerio-to-virtual": "^0.2.0",
-    "webmiddle-service-http-request": "^0.2.0",
-    "webmiddle-service-jsonselect-to-json": "^0.2.0",
-    "webmiddle-service-jsonselect-to-virtual": "^0.2.0",
-    "webmiddle-service-parallel": "^0.2.0",
-    "webmiddle-service-pipe": "^0.2.0",
-    "webmiddle-service-virtual-to-json": "^0.2.0",
-    "webmiddle-service-resume": "^0.2.0"
+    "webmiddle": "^0.3.0",
+    "webmiddle-service-arraymap": "^0.3.0",
+    "webmiddle-service-browser": "^0.3.0",
+    "webmiddle-service-cheerio-to-json": "^0.3.0",
+    "webmiddle-service-cheerio-to-virtual": "^0.3.0",
+    "webmiddle-service-http-request": "^0.3.0",
+    "webmiddle-service-jsonselect-to-json": "^0.3.0",
+    "webmiddle-service-jsonselect-to-virtual": "^0.3.0",
+    "webmiddle-service-parallel": "^0.3.0",
+    "webmiddle-service-pipe": "^0.3.0",
+    "webmiddle-service-virtual-to-json": "^0.3.0",
+    "webmiddle-service-resume": "^0.3.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",

@@ -1,6 +1,6 @@
 import { PropTypes } from 'webmiddle';
 import Pipe from 'webmiddle-service-pipe';
-import Browser from 'webmiddle-service-browser';
+import HttpRequest from 'webmiddle-service-http-request';
 import HtmlToJson, { helpers } from 'webmiddle-service-cheerio-to-json';
 
 const {
@@ -10,7 +10,7 @@ const {
 function FetchPageLinks({ url, query, waitFor }) {
   return (
     <Pipe>
-      <Browser
+      <HttpRequest
         name="rawHtml"
         contentType="text/html"
         url={url}
@@ -39,7 +39,6 @@ function FetchPageLinks({ url, query, waitFor }) {
 FetchPageLinks.propTypes = {
   url: PropTypes.string.isRequired,
   query: PropTypes.string.isRequired,
-  waitFor: PropTypes.string,
 };
 
 export default FetchPageLinks;

@@ -6,16 +6,14 @@ import path from 'path';
 import fs from 'fs';
 import FetchPageLinks from './FetchPageLinks';
 
-rootContext.extend({
-  expectResource: true
-}).evaluate(
+rootContext.evaluate(
   <FetchPageLinks
-    url={process.argv[2]}
-    query={process.argv[3]}
-    waitFor={process.argv[4]}
+    name="hackernews"
+    url="https://news.ycombinator.com/"
+    query="show hn"
   />
-).then(outputResource => {
+).then(resource => {
   console.log(
-    JSON.stringify(outputResource.content, null, 2)
+    JSON.stringify(resource, null, 2)
   );
 });
