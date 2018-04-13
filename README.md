@@ -1,3 +1,5 @@
+## DEPRECATED: use https://github.com/webmiddle/webmiddle-starter-app
+
 # generator-webmiddle [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > Create a simple webmiddle application to get you started
 
